@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TestKoin</string>
+    <string name="action_settings">Settings</string>
+    <string name="my_mocked_device">myMockedDevice</string>
+</resources>
