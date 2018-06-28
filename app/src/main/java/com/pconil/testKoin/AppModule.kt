@@ -1,12 +1,9 @@
 package com.pconil.testKoin
 
-import org.koin.dsl.module.applicationContext
+import org.koin.dsl.module.module
 
-
-private val ocastModule = applicationContext {
-    bean() { CastManager() as ICastManager }
-}
-
-val applicationModule = listOf(
-        ocastModule
+val applicationModules = listOf(
+        module {
+            single() { CastManager() as ICastManager }
+        }
 )
