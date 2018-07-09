@@ -5,7 +5,6 @@ import android.support.test.runner.AndroidJUnit4
 import com.nhaarman.mockito_kotlin.any
 import com.nhaarman.mockito_kotlin.doAnswer
 import com.nhaarman.mockito_kotlin.whenever
-import com.pconil.testKoin.R
 import com.schibsted.spain.barista.assertion.BaristaVisibilityAssertions
 import org.junit.After
 import org.junit.Before
@@ -16,7 +15,7 @@ import org.koin.standalone.StandAloneContext.closeKoin
 import org.koin.standalone.StandAloneContext.loadKoinModules
 import org.koin.standalone.inject
 import org.koin.test.KoinTest
-import org.koin.test.createMock
+import org.koin.test.declareMock
 
 
 /**
@@ -36,8 +35,8 @@ class MainActivityTest: KoinTest {
 
     @Before
     fun setUp() {
-        loadKoinModules(applicationModule)
-        createMock<ICastManager>()
+        loadKoinModules(applicationModules)
+        declareMock<ICastManager>()
     }
 
     @After
